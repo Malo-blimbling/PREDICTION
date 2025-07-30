@@ -1,4 +1,6 @@
 package com.ProjetPrediction.entities.users.dtos;
 
-public record LoginResponseDTO(String token) {
+import java.util.UUID;
+
+public record LoginResponseDTO(String token, UUID userId, String email) {
 }

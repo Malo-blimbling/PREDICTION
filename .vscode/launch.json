@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ApiApplication",
+            "request": "launch",
+            "mainClass": "com.APIGaterway.API.ApiApplication",
+            "projectName": "API"
+        },
+        {
+            "type": "java",
+            "name": "EurekaApplication",
+            "request": "launch",
+            "mainClass": "com.ServeurEureka.Eureka.EurekaApplication",
+            "projectName": "Eureka"
+        },
+        {
+            "type": "java",
+            "name": "ServiceCommunicationApplication",
+            "request": "launch",
+            "mainClass": "com.uvprojet.ServiceCommunication.ServiceCommunicationApplication",
+            "projectName": "ServiceCommunication"
+        },
+        {
+            "type": "java",
+            "name": "ServiceProduitApplication",
+            "request": "launch",
+            "mainClass": "com.UV_PROJET.ServiceProduit.ServiceProduitApplication",
+            "projectName": "ServiceProduit"
+        },
+        {
+            "type": "java",
+            "name": "ServicePublicationApplication",
+            "request": "launch",
+            "mainClass": "com.UV_PROJET.ServicePublication.ServicePublicationApplication",
+            "projectName": "ServicePublication"
+        },
+        {
+            "type": "java",
+            "name": "ServiveMessagePrivApplication",
+            "request": "launch",
+            "mainClass": "com.UVprojet.ServiveMessagePriv.ServiveMessagePrivApplication",
+            "projectName": "ServiveMessagePriv"
+        },
+        {
+            "type": "java",
+            "name": "ProjetPredictionApplication",
+            "request": "launch",
+            "mainClass": "com.ProjetPrediction.ProjetPredictionApplication",
+            "projectName": "letroca"
+        }
+    ]
+}

@@ -14,16 +14,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class MessageService {
-    // Repository pour l'accès aux messages en base
+    
     private final MessageRepository messageRepository;
-    // Mapper pour conversion entité <-> DTO
     private final MessageMapper messageMapper;
-    // RestTemplate pour appels REST inter-microservices
     private final RestTemplate restTemplate = new RestTemplate();
 
-    // URL du microservice utilisateur via API Gateway
-    private final String USER_SERVICE_URL = "http://localhost:9000/api/auth/users/";
-    // URL du microservice publication via API Gateway
+   
+    private final String USER_SERVICE_URL = "http://localhost:9000/auth/users/";
     private final String PUBLICATION_SERVICE_URL = "http://localhost:9000/api/publications/";
 
     public MessageService(MessageRepository messageRepository, MessageMapper messageMapper) {

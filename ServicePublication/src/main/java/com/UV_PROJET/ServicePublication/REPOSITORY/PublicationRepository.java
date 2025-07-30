@@ -7,4 +7,5 @@ import java.util.UUID;
 
 public interface PublicationRepository extends JpaRepository<PublicationEntity, Long> {
     List<PublicationEntity> findByUtilisateurId(UUID utilisateurId);
+    List<PublicationEntity> findByRegion(String region);
 }

@@ -12,4 +12,5 @@ public class PublicationDTO {
     private String description;
     private Double prix;
     private LocalDateTime datePublication;
+    private String region;
 }

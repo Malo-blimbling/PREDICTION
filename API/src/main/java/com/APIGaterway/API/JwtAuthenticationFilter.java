@@ -22,7 +22,7 @@ public class JwtAuthenticationFilter implements WebFilter {
         String path = request.getURI().getPath();
 
         // Définir les chemins qui nécessitent une authentification (à adapter selon vos besoins)
-        boolean isProtectedPath = path.startsWith("/api/private/") || path.startsWith("/api/user/");
+        boolean isProtectedPath = path.startsWith("/auth/private/") || path.startsWith("/auth/user/");
 
         // Si le chemin n'est pas protégé, laisser passer sans vérifier le token
         if (!isProtectedPath) {

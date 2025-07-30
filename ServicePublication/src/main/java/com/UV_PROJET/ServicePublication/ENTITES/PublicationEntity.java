@@ -1,7 +1,9 @@
 package com.UV_PROJET.ServicePublication.ENTITES;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
+import jakarta.persistence.OneToMany;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,5 +33,8 @@ public class PublicationEntity {
     private String description;
     private Double prix;
     private LocalDateTime datePublication; 
-    
+    private String region;
+
+    @OneToMany(mappedBy = "publication", cascade = jakarta.persistence.CascadeType.ALL, orphanRemoval = true)
+    private List<PhotoEntity> photos;
 }

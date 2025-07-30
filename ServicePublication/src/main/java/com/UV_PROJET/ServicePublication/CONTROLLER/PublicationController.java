@@ -41,8 +41,18 @@ public class PublicationController {
         return publicationService.getPublicationsByUtilisateurId(utilisateurId);
     }
 
+    @GetMapping("/region/{region}")
+    public List<PublicationDTO> getPublicationsByRegion(@PathVariable String region) {
+        return publicationService.getPublicationsByRegion(region);
+    }
+
     @DeleteMapping("/{id}")
     public void deletePublication(@PathVariable Long id) {
         publicationService.deletePublication(id);
+    }
+
+    @DeleteMapping("/all")
+    public void deleteAllPublications() {
+        publicationService.deleteAllPublications();
     }
 }

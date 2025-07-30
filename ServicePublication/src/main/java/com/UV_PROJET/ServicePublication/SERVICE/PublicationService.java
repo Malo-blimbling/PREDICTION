@@ -26,7 +26,7 @@ public class PublicationService {
     private RestTemplate restTemplate;
 
     // URLs via API Gateway (port 9000)
-    private static final String USER_SERVICE_URL = "http://localhost:9000/api/users/";
+    private static final String USER_SERVICE_URL = "http://localhost:9000/auth/users/";
     private static final String PRODUIT_SERVICE_URL = "http://localhost:9000/api/produits/";
 
     /**
@@ -84,11 +84,25 @@ public class PublicationService {
         }
     }
 
+    public List<PublicationDTO> getPublicationsByRegion(String region) {
+        try {
+            return publicationRepository.findByRegion(region).stream()
+                .map(publicationMapper::toDTO)
+                .collect(Collectors.toList());
+        } catch (Exception e) {
+            throw new RuntimeException("Erreur lors de la récupération des publications par région : " + e.getMessage());
+        }
+    }
+
     public void deletePublication(Long id) {
         try {
             publicationRepository.deleteById(id);
         } catch (Exception e) {
             throw new RuntimeException("Erreur lors de la suppression de la publication : " + e.getMessage());
         }
+    }
+
+    public void deleteAllPublications() {
+        publicationRepository.deleteAll();
     }
 }
